@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@200&display=swap');
+*{
+  box-sizing: border-box;
+}
+ body {
+  background-color:#ccccff ;  
+  font-family: 'Oswald', sans-serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+  min-height:100vh;
+  margin:0;
+  
+}
+.container{
+  text-align: center;
+  
+}
+.progress-container{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width:300px;
+  justify-content: space-evenly;
+  margin-bottom: 20vh;
+  position: relative;
+  
+}
+.progress-container::before{
+  content: "";
+  background-color: #6699ff;
+  position:absolute;
+  top:50%;
+  left: 0%;
+  height:4px;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s ease;
+
+}
+
+
+.progress{
+  background-color:#3366ff;
+  position:absolute;
+  top:50%;
+  left: 0%;
+  height:4px;
+  width: 20%;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s ease;
+
+}
+
+.circle{
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius:50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #6699ff;
+  transition: 0.4s ease;
+}
+
+.circle.active{
+  border-color:  #3366ff;
+}
+
+.btn{
+    font-family: 'Oswald', sans-serif; 
+    font-size: 20ppx;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #6699ff;
+    border-radius: 20px;
+    cursor: grab;
+  
+}
+
+.btn:active{
+  transform: scale(0.98);
+  cursor: grabbing;
+}
+.btn:disabled{
+  background-color:#6699ff ;
+  cursor: no-drop;
+}
+.btn:focus{
+  outline: 0;
+}
